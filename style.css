@@ -1,0 +1,245 @@
+
+@font-face {
+    font-family: 'tilte-neon';
+    src: url('./fonts/TiltNeon-Regular-VariableFont_XROT\,YROT.ttf');
+}
+
+:root {
+    font-family: 'tilte-neon', cursive;
+    --border-color: rgb(15, 118, 110);
+    --remove-btn: rgba(15,118,110,0.7);
+    --nav-bar: rgb(240, 253, 250);
+    --form-backgroud: rgb(153, 246, 228);
+    --background: #99f6e4;
+}
+
+body {
+    height: 100vh;
+    margin: 0;
+    display: grid;
+    grid-template-rows: 1fr 5fr;
+    margin: 0;
+    background-color: var(--background);
+
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10vh;
+    background-color: var(--nav-bar) ;
+    box-shadow: 1px 1px 100px #0f766e;
+}
+
+.navbar h2 {
+    font-size: 5vh;
+}
+
+.login-btn {
+    background-color: #0f766e;
+    color: #f0fdfa;
+    font-size: 2vh;
+    font-weight: 600;
+    height: 5vh;
+    width: 12vh;
+    border-radius: 6px;
+    transition: all .2s ease-in-out;
+}
+
+.login-btn:hover {
+    cursor: pointer;
+    font-size: 2.1vh;
+    box-shadow: 2px 2px 1px #99f6e4;
+}
+
+.login-popup {
+    display: none;
+    position: fixed;
+    left: 40%;
+    top: 30%;
+    border: 2px solid var(--border-color);
+    background-color: var(--nav-bar);
+    border-radius: 6px;
+    padding: 5vh;
+}
+
+.login-popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.login-form label {
+    padding: 5px 0 5px 0;
+}
+
+.login-form input[type=email], 
+.login-form input[type=password] {
+    border: none;
+    background-color: var(--form-backgroud);
+    width: 100%;
+    padding: 10px;
+}
+
+.logbtn {
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+    margin-top: 3vh;
+}
+
+.login-form button {
+    border: none;
+    background-color: var(--border-color);
+    color: var(--nav-bar);
+    font-size: 2vh;
+    font-weight: 600;
+    padding: 1vh;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.login-form button:hover {
+    cursor: pointer;
+    background-color: var(--nav-bar);
+    color: var(--border-color);
+    transition: all .3s ease-in-out;
+    box-shadow: 2px 2px 1px #99f6e4;
+}
+
+
+.main-container {
+    text-align: center;
+}
+
+.add-btn {
+    border: none;
+    background-color: inherit;
+    font-size: 2.5vh;
+    font-weight: 600;
+    margin-top: 4vh;
+    margin-bottom: 4vh;
+    padding: 1vh;
+    border-radius: 6px;
+}
+
+.add-btn:hover {
+    background-color: rgba(15, 118, 110, 0.8);
+    color: var(--nav-bar);
+    cursor: pointer;
+    font-size: 2.6vh;
+    transition: all .3s ease-in-out;
+    
+}
+
+.add-popup {
+    display: none;
+    position: fixed;
+    left: 40%;
+    top: 30%;
+    border: 2px solid var(--border-color);
+    background-color: var(--nav-bar);
+    border-radius: 6px;
+    padding: 5vh;
+}
+
+.add-popup form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5vh;
+}
+
+.add-form input[type=text], 
+.add-form input[type=number] {
+    border: none;
+    background-color: var(--form-backgroud);
+    width: 100%;
+    padding: 10px;
+}
+
+.addbtn {
+    display: flex;
+    gap: 2vh;
+    width: 100%;
+}
+
+.add-form button {
+    border: none;
+    background-color: var(--border-color);
+    color: var(--nav-bar);
+    font-size: 2vh;
+    font-weight: 600;
+    padding: 1vh;
+    border-radius: 6px;
+    width: 100%;
+}
+
+.add-form button:hover {
+    cursor: pointer;
+    background-color: var(--nav-bar);
+    color: var(--border-color);
+    transition: all .3s ease-in-out;
+    box-shadow: 2px 2px 1px #99f6e4;
+}
+
+
+.library-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px,1fr));
+    gap: 3vh;
+    margin: 0 4vh 2vh 4vh;
+}
+
+.entry {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1.5vh;
+    font-size: 2vh;
+    padding: 2vh;
+    border: 1px solid var(--border-color);
+    background-color: var(--nav-bar);
+    border-radius: 6px;
+    
+}
+
+.myentry {
+    margin: 0;
+    font: inherit;
+    font-size: 2.5vh;
+    word-break: break-all;
+}
+
+.readbtn {
+    width: 100%;
+    font-size: inherit;
+    border: 1px solid var(--border-color);
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.removebtn {
+    width: 100%;
+    font-size: inherit;
+    border: 1px solid var(--border-color);
+    background-color: inherit;
+    font-family: inherit;
+}
+
+.removebtn:hover {
+    background-color: var(--remove-btn);
+    transition: all .2s ease-in-out;
+}
+
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    font-size: .8rem;
+    margin-bottom: .5rem;
+    color: var(--remove-btn);
+}

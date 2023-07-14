@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Project: Library</title>
+        <link rel="stylesheet" href="./style.css">
+    </head>
+    <body>
+        <div class="navbar">
+            <h2>Library</h2>
+            <button class="login-btn">Log In</button>
+            <div class="login-popup">
+                <form action="#" class="login-form">
+                    <h3>Log In</h3>
+                    <label for="login-email">Email:</label>
+                    <input type="email" id="login-email" placeholder="Your Email" required>
+                    <label for="login-psw">Password:</label>
+                    <input type="password" id="login-psw" placeholder="Your Password" required>
+                    <div class="logbtn">
+                        <button type="submit" class="login">Log In</button>
+                        <button type="button" class="login cancel">Cancel</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div class="main-container">
+            <button class="add-btn">+ Add Book</button>
+            <div class="add-popup">
+                <form action="#" class="add-form">
+                    <h3>Add new book</h3>
+                    <input type="text" id="title" placeholder="Title" required>
+                    <input type="text" id="author" placeholder="Author" required>
+                    <input type="number"  id="pages" placeholder="Pages" required>
+                    <div class="read-box">
+                        <label for="readbook">Read ?</label>
+                        <input type="checkbox" id="readbook" class="checkbox">
+                    </div>
+                    <div class="addbtn">
+                        <button type="submit" class="add-book">Add</button>
+                        <button type="button" class="cancel-book">Cancel</button>
+                    </div>
+                </form>
+            </div>
+            <div class="library-list">
+            </div>
+        </div>
+        <footer class="footer">Copyright © Ma-thyas 2023</footer>
+        <script src="./script.js"></script>
+    </body>
+
+</html>
